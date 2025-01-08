@@ -1,0 +1,13 @@
+Eg: lib/db.js
+export const connectDB = async () => {}
+Because it is export without the default, when it comes to importing this kind, in the file where this is being imported, put the name of const inside curl braces when importing
+
+Eg: src/index.js
+import {connectDB} from "../lib/db.js"
+
+
+If instead when export, you use export default <name> then you don't have to use curly braces while exporting.
+Eg: lib/db.js
+export default connectDB = async () => {}
+src/index.js
+import connectDB from "../lib/db.js"

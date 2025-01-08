@@ -1,0 +1,6 @@
+CRUD Functionalities Methods
+1. POST
+2. GET
+3. DELETE
+4. PUT - replaces the existing document with updated version even to the parts of document which have not be updated
+5. PATCH - updates only the parts of document which have been changed and doesn't do anything to the remaining
