@@ -11,12 +11,12 @@ import { connectDB } from "./lib/db.js";
 
 import authRoutes from "./routes/auth.route.js";
 import messageRoutes from "./routes/message.route.js";
-// import { app, server } from "./lib/socket.js";
+import { app, server } from "./lib/socket.js";
 
 dotenv.config();
 const PORT = process.env.PORT;
 const __dirname = path.resolve();
-const app = express(); //remove this later and switch with socketio app and server
+// const app = express(); //this is how a default app instance is created when no websocket is used
 app.use(express.json());
 app.use(cookieParser());
 app.use(
