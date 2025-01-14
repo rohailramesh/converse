@@ -1,1 +1,26 @@
 Socket.io is a library that establishes websocket connection between client and server which is bidirectional (fully duplex) meaning either party can send or receive messages (events) without waiting for a response once an initial handshake has been established. That initial exchange is still done through a http request but web socket offers low-latency.
+
+To listen to any event on client or server side, we can use socket.on()
+
+Socke.io() has a package for frontend and backend.
+
+Getting started:
+1. On top of the express server we want to add socket.io server so we should replace 
+
+2. Complete step 1 in a socket.js file in lib folder and export all the required elements to index.js to add to the express server yo already have.
+
+You can also export some helper functions like getting users socketId to send and receive messages in the messages.controller.js by importing them
+
+Different functions by socket.io (io is an instance of a Socket.io that we create in socke.js)
+
+- io.on("Message", call back function)
+This listens for when a new client is connected 
+
+- socket.on("Message", callback function)
+This is within the io.on() and this one listens to events being sent and received by that user
+
+- io.emit()
+Emits message to all connected clients
+
+- io.to.emit()
+Emits message to a specific client
