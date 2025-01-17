@@ -15,7 +15,7 @@ dotenv.config();
 const PORT = process.env.PORT;
 const __dirname = path.resolve();
 // const app = express(); //this is how a default app instance is created when no websocket is used
-app.use(express.json());
+app.use(express.json({ limit: "10mb" }));
 app.use(cookieParser());
 app.use(
   cors({
